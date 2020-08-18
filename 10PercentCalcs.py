@@ -1,7 +1,7 @@
 import pandas as pd
 import csv
 
-df = pd.read_csv('//Users/daveweimer/Desktop/BPNP/Divest-Invest/EarningsSummation2019.csv', encoding='utf-8')
+df = pd.read_csv('EarningsSummation2019.csv', encoding='utf-8')
 
 def SalaryStat(df, name):
     dept = df.loc[df['DEPARTMENT_NAME'] == name]
@@ -29,7 +29,7 @@ for i in df.DEPARTMENT_NAME.unique():
     stats_list.append(SalaryStat(df, i))
 
 c_names = stats_list[0].keys()
-csv_file = '//Users/daveweimer/Desktop/BPNP/Divest-Invest/10-percent-stats.csv'
+csv_file = '10-percent-stats.csv'
 
 with open(csv_file, 'w') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=c_names)

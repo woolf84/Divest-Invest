@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('//Users/daveweimer/Desktop/BPNP/Divest-Invest/Histos_Percents.csv', encoding='utf-8')
+df = pd.read_csv('Histos_Percents.csv', encoding='utf-8')
 
 df['0_90K']=df.iloc[:,2:11].sum(axis=1)
 df['120K_']=df.iloc[:,14:27].sum(axis=1)
